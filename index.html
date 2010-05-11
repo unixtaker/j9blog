@@ -1,0 +1,15 @@
+<html>
+<head>
+<title>Unixtaker's blog</title>
+</head>
+<body>
+{% for blogpost in blogposts %}
+<div> 
+ <h2>{{ blogpost.title }}</h2> {{ blogpost.author }} : {{ blogpost.date }}
+ <blockquote>{{ blogpost.content }}</blockquote>
+</div>
+{% endfor %}
+<a href="{{ url }}">{{ url_linktext }}</a>
+| <a href="/Post">Create a Post</a>
+</body>
+</html>
