@@ -1,5 +1,31 @@
 body {
 	font-family: Verdana, Helvetica, sans-serif;
-	background-color: #DFDFDF;
+	#background-color: #DFDFDF;
 }
 
+blockquote {
+	#background-color: #AEAEAE;
+}
+a {
+	background-color: #ACD194; 
+	border-color: #83BB60;
+	text-decoration: none;
+}
+
+div.container {
+	overflow: auto;
+	background: url(/images/background.png) repeat-y;
+}
+
+div.blog {
+	float:left;
+	width: 700px;
+	padding-left: 40px;
+}
+
+div.sidebar {
+	#background-color: #EEEEEE;
+	width: 240px;
+	float: left;
+	padding-left: 15px;
+}

@@ -4,13 +4,38 @@
 <title>Unixtaker's blog</title>
 </head>
 <body>
+
+<div class="actionbar">
+<a href="{{ url }}">{{ url_linktext }}</a>
+| <a href="/Post">Create a Post</a>
+</div>
+
+<div class="container">
+
+<div class="blog">
 {% for blogpost in blogposts %}
-<div> 
+<div class="post"> 
  <h2>{{ blogpost.title }}</h2> {{ blogpost.author }} : {{ blogpost.date }}
  <blockquote>{{ blogpost.content }}</blockquote>
 </div>
 {% endfor %}
-<a href="{{ url }}">{{ url_linktext }}</a>
-| <a href="/Post">Create a Post</a>
+</div>
+
+
+<div class="sidebar">
+<h4>Search</h4>
+
+<h4>Archive</h4>
+<li>2010</li>
+<li>2009</li>
+
+<h4>Readers</h4>
+follow me
+
+<h4>About me</h4>
+unixtaker bio
+</div>
+
+</div>
 </body>
 </html>
