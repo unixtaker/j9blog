@@ -9,22 +9,7 @@ from google.appengine.ext.webapp import template
 
 from db_model import BlogPost
 
-class BlogPostPage(webapp.RequestHandler):
-	def get(self):
-		if users.get_current_user():
-			path = os.path.join(os.path.dirname(__file__), 'post.html')
-			self.response.out.write(template.render(path, None))
-		else:
-			self.redirect('/')
-
-	def post(self):
-		blog = BlogPost()
-		blog.author = users.get_current_user()
-		blog.content = self.request.get('content')
-		blog.title = self.request.get('title')
-		blog.put()
-		self.redirect('/')
-
+from post_handler import BlogPostPage
 
 
 class MainPage(webapp.RequestHandler):
